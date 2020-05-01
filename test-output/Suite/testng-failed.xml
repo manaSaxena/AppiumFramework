@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test">
+  <listeners>
+    <listener class-name="generic.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="mob.AppiumFramework.Ecomm_TC_4"/>
-      <class name="mob.AppiumFramework.DemoBasicsTest"/>
+      <class name="testScripts.Ecomm_TC_4">
+        <methods>
+          <include name="validateSum"/>
+        </methods>
+      </class> <!-- testScripts.Ecomm_TC_4 -->
+      <class name="testScripts.DemoBasicsTest">
+        <methods>
+          <include name="basicTest"/>
+        </methods>
+      </class> <!-- testScripts.DemoBasicsTest -->
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
